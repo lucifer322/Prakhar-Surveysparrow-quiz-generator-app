@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Quiz Generator</title>
+  <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+</head>
+<body>
+  <div class="main">
+    
+    <h1>Quick Quiz Generator</h1>
+    <form>
+      <label for="surveyName">Quiz Name</label>
+      <input type="text" id="surveyName" name="surveyName" required>
+
+      <label for="fileInput">Upload File</label>
+      <input type="file" id="fileInput" name="fileInput" accept=".csv" required>
+
+      <button type="submit" onclick="validateForm()" id="btn">Generate Quiz</button>
+      <div id="output"></div>
+    </form>
+  </div>
+</body>
+<script src="https://ssdk.surveysparrow.dev/ssdk/2.0/assets/survey_client.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<script defer src="./scripts/app.js"></script>
+</html>
